@@ -1,6 +1,7 @@
 const judul = document.querySelector('h1');
 const btnSimpan = document.getElementById('btnSimpan');
 const inputFeedback = document.getElementById('Feedback');
+const errorMessage = document.getElementById('errorMessage');
 
 const dapatkanWarnaAcak = () => {
     const huruf = '0123456789ABCDEF';
@@ -20,10 +21,15 @@ judul.addEventListener('click', () => {
 btnSimpan.addEventListener('click', (event) => {
     event.preventDefault();
     const hasil = inputFeedback.value.trim();
-    if (hasil === "") {
-        alert("Feedback kosong!");
+    if (hasil.length < 10) {
+        errorMessage.style.display = 'block';
+        inputFeedback.style.borderColor = '2px solid red';
     } else {
-        alert("Terkirim: " + hasil);
-        inputFeedback.value = "";
+        errorMessage.style.display = 'none';
+        inputFeedback.style.borderColor = '';
+        console.log("Feedback disimpan:", hasil);
+        alert("Feedback berhasil disimpan!");
+
+        inputFeedback.value = '';
     }
 });
