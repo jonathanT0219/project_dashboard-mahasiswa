@@ -1,0 +1,48 @@
+/* Aturan Global */
+* {
+    box-sizing: border-box; /* Agar padding tidak merusak lebar elemen */
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center; /* Horisontal center */
+    padding: 50px;
+}
+
+/* Mengatur "Objek" Container */
+.container {
+    background: white;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Mengatur Tabel secara Terstruktur */
+table {
+    width: 100%;
+    border-collapse: collapse; /* Menghilangkan double border */
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Logika Form dengan Flexbox */
+form {
+    display: flex;
+    flex-direction: column; /* Menyusun ke bawah */
+    gap: 10px; /* Jarak otomatis antar elemen form */
+    margin-top: 20px;
+}
